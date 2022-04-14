@@ -1,0 +1,41 @@
+
+Contents of TheHagueBurglars.csv datafile. 
+This file contains information on 548 cleared burglaries that took place in The Hague, The Netherlands in the years 1996-2001. The coordinate system is projected with the distance units being meters.  The data are an exact copy of the data analyzed by Bernasco and Nieuwbeerta (2005).
+	Variable name	Description
+	---------------------------
+	ID and coordinates	
+	1	CASE		ID field for the burglary (offence)
+	2	PERSON_ID	ID field for the burglar (person)
+	3	XRESID		X coordinate of the centroid of the burglar’s neighborhood of residence
+	4	YRESID		Y coordinate of the centroid of the burglar’s neighborhood of residence
+	Neighborhood identifiers	
+	5	NHOODBUR	ID field of the neighborhood where the burglary was committed
+	6	NHOODRES	ID field of the neighborhood where the burglar lived at the time the burglary was committed
+	Burglar characteristics	
+	7	B_MINOR		minor burglar (0 = burglar 18+ years; 1 = burglar 12-17 years)
+	8	B_ADULT		adult burglar (1 = burglar 18+ years; 0 = burglar 12-17 years
+	9	B_NATIVE	native burglar (1 = native Dutch; 0 = foreign-born)
+	10	B_FOREIGN	nonnative burglar (0 = native Dutch; 1 = foreign-born)
+
+The second file is labeled “TheHagueNeighborhoods.csv”. It contains information on 89 neighborhoods in The Hague in the years 1996-2001. The coordinate system is projected with the distance units being meters. The data are an almost exact copy of the data analyzed by Bernasco and Nieuwbeerta (2005), the difference being that here the neighborhood characteristics are averages over the period 1996-2001, while the original research used annually measured neighborhood characteristics. 
+
+
+Contents of TheHagueNeighborhoods datafile..
+	Variable name	Description
+	---------------------------
+	ID and coordinates	
+	1	NHOODID		ID field for the neighborhood. Values correspond to NHOODBUR and NHOODRES in TheHagueBurglars
+	2	X			X coordinate of the centroid of the neighborhood
+	3	Y			Y coordinate of the centroid of the neighborhood
+	Neighborhood characteristics	
+	4	RESUNITS	number of residential units (x 1000) 	
+	5	PROPVAL		mean property value (x 100,000 euro)
+	6	HOMEOWN		percentage home ownership (x 10%)
+	7	ETNHETERO	Herfindahl index of ethnic heterogeneity (x 100)
+	8	RESMOBIL	percentage residential mobility (x 10%)
+	9	SINGFAM		percentage of properties that are single family dwellings (x 10%)
+	10	PROXCITY	negative distance1 to The Hague city center (x 1 km)
+	11	SURFACE		neighborhood surface in hectare (100x100m units)
+
+	In order to have only positive expected coefficients, the sign of ‘distance to the city center’ was reversed, so that the hypothesized estimates is positive (proximity to city center increases probability of being selected)
+
